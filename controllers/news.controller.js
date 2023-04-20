@@ -27,3 +27,17 @@ export const getNews = async function (id) {
         return null;
     }
 }
+
+export const searchNews = async function (id, keyword) {
+    //search news by keyword
+    try {
+        const news = await newsModel.find({"$or": [{user_id: id, title: new RegExp(keyword, 'i')}, {user_id: id, short_description: new RegExp(keyword, 'i')}]});
+        if (news) {
+            return news;
+        } else {
+            return null;
+        }
+    } catch (error) {
+        return null;
+    }
+}

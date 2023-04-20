@@ -2,7 +2,7 @@ import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import { getCategoryById, getCategories} from './controllers/category.controller.js';
 import { getNewSourceById, getNewSources} from './controllers/newSource.controller.js';
-import { getNewsByCat, getNews} from './controllers/news.controller.js';
+import { getNewsByCat, getNews, searchNews} from './controllers/news.controller.js';
 import { typeDefs } from './graphql_schema.js';
 import mongoose from 'mongoose';
 const db = mongoose.connect("mongodb://127.0.0.1:27017/proyecto", { useNewUrlParser: true, useUnifiedTopology: true });
@@ -29,6 +29,9 @@ const resolvers = {
     },
     newsByCat: async (parent, args, context, info) => {
       return await getNewsByCat(args.id, args.cat);
+    },
+    searchNews: async (parent, args, context, info) => {
+      return await searchNews(args.id, args.keyword);
     },
     version: () => "1.2"
   },

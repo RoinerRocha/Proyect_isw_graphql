@@ -35,6 +35,7 @@ export const typeDefs = `#graphql
     newSourceById(id: String): NewSource
     news(id: String): [News]
     newsByCat(id: String, cat: String): [News]
+    searchNews(id: String, keyword: String): [News]
     version: String
   }
 `;
