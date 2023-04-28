@@ -32,7 +32,7 @@ export const typeDefs = `#graphql
     categories: [Category]
     categoryById(id: String): Category
     newSources: [NewSource]
-    newSourceById(id: String): NewSource
+    newSourceById(id: String): [NewSource]
     news(id: String): [News]
     newsByCat(id: String, cat: String): [News]
     searchNews(id: String, keyword: String): [News]
