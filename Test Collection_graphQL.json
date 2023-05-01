@@ -1,0 +1,141 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Test Collection",
+    "dateExported": "2023-05-01T01:33:30.296Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "34183d76-8dca-4524-9212-ef92d09b5e02",
+            "colId": "713d8cdc-6fc2-4374-b887-850e58068456",
+            "containerId": "",
+            "name": "all categories",
+            "url": "localhost:4000/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-01T01:32:27.736Z",
+            "modified": "2023-05-01T01:33:15.676Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "graphql",
+                "raw": "",
+                "form": [],
+                "graphql": {
+                    "query": "{\n    categories{\n    name\n    }\n}"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "bd595c59-d7c5-4830-9ac8-c0ca5b9948b3",
+            "colId": "713d8cdc-6fc2-4374-b887-850e58068456",
+            "containerId": "",
+            "name": "all news sources",
+            "url": "localhost:4000/",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-05-01T01:31:54.120Z",
+            "modified": "2023-05-01T01:33:18.861Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "graphql",
+                "raw": "",
+                "form": [],
+                "graphql": {
+                    "query": "{\n    newSources{\n    name\n    }\n}"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "0178ca3c-cb49-48ad-ad09-6dedfb1c085c",
+            "colId": "713d8cdc-6fc2-4374-b887-850e58068456",
+            "containerId": "",
+            "name": "news sources by user",
+            "url": "localhost:4000/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-01T01:26:48.986Z",
+            "modified": "2023-05-01T01:26:48.986Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "graphql",
+                "raw": "",
+                "form": [],
+                "graphql": {
+                    "query": "{\n    newSourceById(id: \"641217678ecc6d7ee84892a3\"){\n    name\n    }\n}"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "253e4410-5f5e-4879-b8b5-bf28a50ec33c",
+            "colId": "713d8cdc-6fc2-4374-b887-850e58068456",
+            "containerId": "",
+            "name": "news by user",
+            "url": "localhost:4000/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-05-01T01:27:23.416Z",
+            "modified": "2023-05-01T01:28:01.683Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "graphql",
+                "raw": "",
+                "form": [],
+                "graphql": {
+                    "query": "{\n    news(id: \"641217678ecc6d7ee84892a3\"){\n    title\n    }\n}"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "10de2fd2-25ad-4373-b22f-a26ac7380c6a",
+            "colId": "713d8cdc-6fc2-4374-b887-850e58068456",
+            "containerId": "",
+            "name": "news by category",
+            "url": "localhost:4000/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-05-01T01:28:18.204Z",
+            "modified": "2023-05-01T01:29:30.080Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "graphql",
+                "raw": "",
+                "form": [],
+                "graphql": {
+                    "query": "{\n    newsByCat(id: \"641217678ecc6d7ee84892a3\", cat: \"6414756c0f7ee1f26c31df04\"){\n    title\n    }\n}"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "454ea9b3-b5e3-4a45-91f9-823fa4861e55",
+            "colId": "713d8cdc-6fc2-4374-b887-850e58068456",
+            "containerId": "",
+            "name": "search news",
+            "url": "localhost:4000/",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-05-01T01:29:42.238Z",
+            "modified": "2023-05-01T01:31:13.074Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "graphql",
+                "raw": "",
+                "form": [],
+                "graphql": {
+                    "query": "{\n    searchNews(id: \"641217678ecc6d7ee84892a3\", keyword: \"luis\"){\n    title\n    }\n}"
+                }
+            },
+            "tests": []
+        }
+    ]
+}
